@@ -48,7 +48,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### App Setup
 
-1. Create a GitHub repo called `burger` and clone it to your computer.
+<!-- 1. Create a GitHub repo called `burger` and clone it to your computer.
 
 2. Make a package.json file by running `npm init` from the command line.
 
@@ -61,22 +61,23 @@ Having an active and healthy commit history on GitHub is important for your futu
 6. Install MySQL npm package: `npm install mysql`.
 
 7. Require the following npm packages inside of the server.js file:
-   * express
+   * express -->
 
 #### DB Setup
 
-1. Inside your `burger` directory, create a folder named `db`.
+<!-- 1. Inside your `burger` directory, create a folder named `db`.
 
-2. In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
+2. In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following: -->
 
-   * Create the `burgers_db`.
+   <!-- * Create the `burgers_db`.
    * Switch to or use the `burgers_db`.
    * Create a `burgers` table with these fields:
      * **id**: an auto incrementing int that serves as the primary key.
      * **burger_name**: a string.
-     * **devoured**: a boolean.
+     * **devoured**: a boolean. -->
 
-3. Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
+<!-- 3.  Still in the `db` folder, create a `seeds.sql` file.-->
+<!-- In this file, write insert queries to populate the `burgers` table with at least three entries.
 
 4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
 
@@ -90,20 +91,20 @@ Having an active and healthy commit history on GitHub is important for your futu
 
    * Now insert the entries you defined in `seeds.sql` by running the file: `source seeds.sql`.
 
-   * Close out of the MySQL command line tool: `exit`.
+   * Close out of the MySQL command line tool: `exit`. -->
 
 #### Config Setup
 
-1. Inside your `burger` directory, create a folder named `config`.
+<!-- 1. Inside your `burger` directory, create a folder named `config`.
 
-2. Create a `connection.js` file inside `config` directory.
+2. Create a `connection.js` file inside `config` directory. -->
 
-   * Inside the `connection.js` file, setup the code to connect Node to MySQL.
+   <!-- * Inside the `connection.js` file, setup the code to connect Node to MySQL.
 
-   * Export the connection.
+   * Export the connection. -->
 
-3. Create an `orm.js` file inside `config` directory.
-
+<!-- 3. Create an `orm.js` file inside `config` directory. -->
+<!-- 
    * Import (require) `connection.js` into `orm.js`
 
    * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
@@ -112,30 +113,30 @@ Having an active and healthy commit history on GitHub is important for your futu
      * `insertOne()`
      * `updateOne()`
 
-   * Export the ORM object in `module.exports`.
+   * Export the ORM object in `module.exports`. -->
 
 #### Model setup
+<!-- 
+* Inside your `burger` directory, create a folder named `models`. -->
 
-* Inside your `burger` directory, create a folder named `models`.
-
-  * In `models`, make a `burger.js` file.
+  <!-- * In `models`, make a `burger.js` file.
 
     * Inside `burger.js`, import `orm.js` into `burger.js`
 
     * Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
 
-    * Export at the end of the `burger.js` file.
+    * Export at the end of the `burger.js` file. -->
 
 #### Controller setup
 
-1. Inside your `burger` directory, create a folder named `controllers`.
+<!-- 1. Inside your `burger` directory, create a folder named `controllers`.
 
 2. In `controllers`, create the `burgers_controller.js` file.
 
 3. Inside the `burgers_controller.js` file, import the following:
 
    * Express
-   * `burger.js`
+   * `burger.js` -->
 
 4. Create the `router` for the app, and export the `router` at the end of your file.
 
