@@ -1,3 +1,5 @@
+const mysql = require('mysql');
+
 // * Inside the `connection.js` file, setup the code to connect Node to MySQL.
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -13,7 +15,12 @@ const connection = mysql.createConnection({
   });
   
   connection.connect((err) => {
-    if (err) throw err;
+    if (err) {
+      console.error(`error connecting: ${err.stack}`);
+      return;
+    }
     console.log(`connected as id ${connection.threadId}`);
   });
+
 // * Export the connection.
+module.exports = connection;
