@@ -1,11 +1,30 @@
 // * Import (require) `connection.js` into `orm.js`
-const connection = require('../config/connection');
+var connection = require('./connection.js');
 
+var orm = {
+	selectAll: function( tablename,cb){
 
-//    * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
+		connection.query('SELECT * FROM ??;', [tablename], function(err, result){
+			if (err) throw err;
+			// console.log(result);
+			 cb(result);
+		})
+	},
+	insertOne: function (tablename, colname, burger_name, cb) {
+		
+		connection.query("INSERT INTO ?? (??) VALUES (?)", [ tablename ,colname, burger_name], function (err, result) {
+			if (err) throw err;			
+			 cb(result);
+		});
+	},
+	updateOne: function ( tablename,colname, devoured, id, cb) {
+		
+		connection.query("UPDATE ?? SET ?? = ? WHERE id = ?", [tablename , colname ,devoured , id], function (err, result) {
+			if (err) throw err;			
+			cb(result);
+			
+		});
+	},
+};
 
-//      * `selectAll()`
-//      * `insertOne()`
-//      * `updateOne()`
-
-//    * Export the ORM object in `module.exports`.
+module.exports = orm;

@@ -1,21 +1,24 @@
-const mysql = require('mysql');
-const express = require('express')
+var express = require("express");
 
-const connection = mysql.createConnection({
-  host: 'localhost',
+var PORT = process.env.PORT || 8000;
+var app = express();
 
-  // Your port, if not 3306
-  port: 3306,
+// Serve static content for the app from the "public" folder
+app.use(express.static("public"));
 
-  // Your username
-  user: 'root',
+// Parse application body
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-  password: 'yourRootPassword',
-  database: 'employee_database',
-});
+var exphbs = require("express-handlebars");
 
-connection.connect((err) => {
-  if (err) throw err;
-  console.log(`connected as id ${connection.threadId}`);
-  employeeData();
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+var burger = require("./controllers/burgerController");
+
+app.use('/', burger);
+
+app.listen(PORT, function () {
+    console.log("Listening on port: ", PORT);
 });

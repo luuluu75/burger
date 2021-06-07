@@ -1,9 +1,37 @@
-// * Inside `burger.js`, import `orm.js` into `burger.js`
+var orm = require('../config/orm.js');
 
-const connection = require('../config/orm');
+var burger = {
 
-// * Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
+  		selectAll: function(cb){
+    	orm.selectAll( 'burgers',function(res){
 
-// * Export at the end of the `burger.js` file.
+    		cb(res);
+    	});     
+  	},
 
-export(burger.js);
+  		insertOne: function(burger_name, cb){
+   		orm.insertOne('burgers','burger_name' , burger_name, function(res) {
+   			
+   			cb(res);
+   			
+   		});     
+
+  	},
+     
+  		updateOne: function( burger_id, cb){
+  		orm.updateOne('burgers','devoured',true, burger_id, function(res) {
+  			
+  			cb(res)
+
+  		});
+	}, restoreOne: function(burger_id, cb) {
+  		orm.updateOne('burgers','devoured',false, burger_id, function(res) {
+  			
+  			cb(res)
+
+  		});
+
+	}
+};
+
+module.exports = burger;
