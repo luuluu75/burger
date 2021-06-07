@@ -1,5 +1,5 @@
-# # The Burger Appp
-Hub repo top language](https://img.shields.io/github/languages/top/luuluu75/burger?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/luuluu75/burger?style=flat&logo=appveyor)
+# # The Burger App
+  [Hub repo top language](https://img.shields.io/github/languages/top/luuluu75/burger?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/luuluu75/burger?style=flat&logo=appveyor)
    
    Check out the badges hosted by [shields.io](https://shields.io/).
    
@@ -22,13 +22,13 @@ Hub repo top language](https://img.shields.io/github/languages/top/luuluu75/burg
    
    *Steps required to install project and how to get the development environment running:*
    
-   Just click on this link -   
+   Just click on this link - http://the-burger-joint.herokuapp.com/
    
    ## Usage 
    
    *Instructions and examples for use:*
    
-   This application allows users to track thier budget on the go, even when they are offline. It show cases the code th
+   You can create a list of burgers you want to eat and cross them off the list once you have tried them
    
    ## License
    
@@ -38,5 +38,5 @@ Hub repo top language](https://img.shields.io/github/languages/top/luuluu75/burg
    
    ## Project Links
 
-   * Github Repository - https://github.com/luuluu75/budget-tracker.git
-   * Heroku Link -  https://hidden-cliffs-58347.herokuapp.com/
+   * Github Repository - https://github.com/luuluu75/burger.git
+   * Heroku Link -  http://the-burger-joint.herokuapp.com/
