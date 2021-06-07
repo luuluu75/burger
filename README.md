@@ -1,5 +1,5 @@
 # # The Burger App
-  [Hub repo top language](https://img.shields.io/github/languages/top/luuluu75/burger?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/luuluu75/burger?style=flat&logo=appveyor)
+  ![Hub repo top language](https://img.shields.io/github/languages/top/luuluu75/burger?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/luuluu75/burger?style=flat&logo=appveyor)
    
    Check out the badges hosted by [shields.io](https://shields.io/).
    
